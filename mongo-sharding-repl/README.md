@@ -1,8 +1,6 @@
-# pymongo-api
+# mongo-sharding-repl
 
-## Как запустить финальный вариант
-
-Заходим в директорию ./mongo-sharding-repl
+## Как запустить
 
 Запускаем mongodb и приложение
 
@@ -10,11 +8,19 @@
 docker compose up -d
 ```
 
-Заполняем mongodb данными
+Инициализируем configSrv, шарды (с репликами), роутер, а также заполняем mongodb данными:
 
 ```shell
 ./scripts/mongo-init.sh
 ```
+
+Проверяем количество документов:
+
+```shell
+./scripts/mongo-count-documents.sh
+```
+
+# pymongo-api
 
 ## Как проверить
 
